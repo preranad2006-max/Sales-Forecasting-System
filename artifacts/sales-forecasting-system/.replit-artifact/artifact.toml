@@ -1,0 +1,28 @@
+kind = "data-app"
+previewPath = "/"
+title = "Sales Forecasting System"
+description = "A Streamlit-inspired sales forecasting dashboard for uploading historical sales data, exploring trends, comparing machine learning and time series models, and generating daily, weekly, and monthly forecasts with business insights."
+version = "1.0.0"
+id = "artifacts/sales-forecasting-system"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24102
+
+[services.development]
+run = "pnpm --filter @workspace/sales-forecasting-system run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/sales-forecasting-system", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/sales-forecasting-system/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24102"
+BASE_PATH = "/"

@@ -1,6 +1,6 @@
-# [Project name]
+# Sales Forecasting System
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+An interactive forecasting cockpit and Streamlit companion that turns historical sales data into daily, weekly, and monthly planning forecasts.
 
 ## Run & Operate
 
@@ -30,7 +30,10 @@ _Populate as you build — non-obvious choices a reader couldn't infer from the 
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+- Upload and validate CSV/XLSX sales data with the required seven-column schema.
+- Explore trends, seasonality, product/store mix, and promotion/holiday lift.
+- Train and compare Linear Regression, Random Forest, ARIMA-style, and seasonal-naive approaches.
+- Review MAE, MSE, RMSE, confidence bands, exports, and viva-ready methodology.
 
 ## User preferences
 
